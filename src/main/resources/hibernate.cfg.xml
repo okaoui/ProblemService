@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE hibernate-configuration PUBLIC
+                "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+                "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+    <!-- Postgress Settings -->
+      <!-- <property name="hibernate.dialect">org.hibernate.dialect.PostgreSQLDialect</property>
+        <property name="hibernate.connection.driver_class">org.postgresql.Driver</property>
+        <property name="hibernate.connection.url">jdbc:postgresql://localhost:5432/problemstore</property>
+        <property name="hibernate.connection.username">postgres</property>
+        <property name="hibernate.connection.password">123.@pol</property>
+        <property name="hibernate.cache.use_second_level_cache">false</property>
+        <property name="hibernate.current_session_context_class">thread</property>  -->
+    <!-- Oracle Settings
+        <property name="hibernate.dialect">org.hibernate.dialect.OracleDialect</property>
+        <property name="hibernate.connection.driver_class">oracle.jdbc.driver.OracleDriver</property>
+        <property name="hibernate.connection.url">jdbc:oracle:thin:@localhost:1521:ob</property>
+        <property name="hibernate.connection.username">pi</property>
+        <property name="hibernate.connection.password">tad</property>
+        <property name="hibernate.default_schema">PI</property>
+        <property name="hibernate.cache.use_second_level_cache">false</property>
+         -->
+		<property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+        <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+        <property name="hibernate.connection.url">jdbc:mysql://developeinjava.com:3306/problemstore</property>
+        <property name="hibernate.connection.username">problem_service</property>
+        <property name="hibernate.connection.password">problem_service</property>
+        <property name="hibernate.cache.use_second_level_cache">false</property>
+		<property name="hibernate.show_sql">true</property>
+		<property name="hibernate.current_session_context_class">thread</property>
+
+    </session-factory>
+</hibernate-configuration>

@@ -1,0 +1,17 @@
+<log4j:configuration xmlns:log4j="http://jakarta.apache.org/log4j/">
+    <appender name="fileAppender" class="org.apache.log4j.RollingFileAppender">
+        <!-- <param name="Threshold" value="INFO" /> -->
+       <!-- <param name="File" value="/Users/oussamakaoui/logs/problem.log" />-->
+        <param name="File" value="/root/logs/problem.log"/>
+        <layout class="org.apache.log4j.PatternLayout">
+            <param name="ConversionPattern" value="%d{yyyy-MM-dd HH:mm:ss} %-5p %c{1}:%L - %m%n" />
+            <param name="MaxFileSize" value="10MB" />
+            <param name="MaxBackupIndex" value="10" />
+        </layout>
+    </appender>
+ 
+    <root>
+        <priority value="info" />
+        <appender-ref ref="fileAppender" />
+    </root>
+</log4j:configuration>
